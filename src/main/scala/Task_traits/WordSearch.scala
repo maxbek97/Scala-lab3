@@ -6,7 +6,7 @@ trait WordSearch {
 
 trait ExactMatchSearch extends WordSearch {
     override def search(word: String, text: String): Boolean = {
-        val words = text.replaceAll("[^а-яА-Я]+", " ").split(" ").toList;
+        val words = text.replaceAll("[^а-яА-Я]+", " ").split(" ").toList
         var marker = false
         for i:String <- words do
             if i == word then
